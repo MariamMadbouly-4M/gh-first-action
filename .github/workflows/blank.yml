@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # هذه الخطوة أساسية لتجعل الـ Runner يرى ملفات الكود الخاص بك
-      - name: Checkout code
-        uses: actions/checkout@v4
-
+   
       - name: print working message
         run: echo "The workflow is running and has access to your files!"
+       
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: list repo
+        run: ls -la
+     
+        
